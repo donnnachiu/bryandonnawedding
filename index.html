@@ -640,6 +640,40 @@
                 animation-name: fade;
                 animation-duration: 1.5s;
             }
+
+        /* Logo Styles */
+        .wedding-logo {
+            height: 70px; /* Default size - adjust as needed */
+            width: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .wedding-logo:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+        
+        /* Adjust header to accommodate logo */
+        header {
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-container {
+            align-items: center;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .wedding-logo {
+                height: 50px; /* Smaller on mobile */
+            }
+            
+            header {
+                padding: 10px 0;
+            }
+        }
             
             @keyframes fade {
                 from {opacity: .4}
@@ -651,19 +685,23 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container nav-container">
-            <a href="#home" class="logo">Bryan <span class="ampersand">&</span> Donna</a>
-            <button class="menu-btn">≡</button>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#details">Details</a></li>
-                    <li><a href="#team">Team </a></li>
-                    <li><a href="#accommodation">Accommodation</a></li>
-                    <li><a href="#travel">Food & Travel</a></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="container nav-container">
+        <a href="#home" class="logo">
+            <img src="https://github.com/donnnachiu/bryandonnawedding/blob/b21ad3c54cbdc96d2fd381ff5dd6664a700cfacb/Donna%20%26%20Bryan%20-%20Logo.png?raw=true" 
+                 alt="Bryan & Donna Wedding Logo"
+                 class="wedding-logo">
+        </a>
+        <button class="menu-btn">≡</button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#accommodation">Accommodation</a></li>
+                <li><a href="#travel">Food & Travel</a></li>
+            </ul>
+        </nav>
+    </div>
     </header>
 
     <!-- Home Section -->
