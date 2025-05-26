@@ -177,24 +177,27 @@
             cursor: pointer;
         }
 
-        /* Hero Section - UPDATED for background image */
+        /* Hero Section - for background image */
         .hero {
             height: 100vh;
-            /* background-color: var(--white); REMOVED - image will cover */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            /* UPDATED: Align content block to the top part of the hero section */
+            justify-content: flex-start; 
             align-items: center;
             text-align: center;
-            padding-top: 80px; 
-            position: relative; /* For overlay positioning */
+            /* UPDATED: Adjust padding-top to position content below header and give some space. 
+               80px for the header, plus some viewport height (e.g., 8vh) for spacing.
+               Adjust '8vh' as needed to position the text perfectly. */
+            padding-top: calc(80px + 8vh); 
+            position: relative; 
             background-image: url('https://github.com/donnnachiu/bryandonnawedding/raw/7fdcb03d27fccf71926204308d328a80e88e01b5/WhatsApp%20Image%202025-05-27%20at%2000.48.15.jpeg');
             background-size: cover;
-            background-position: center center;
+            background-position: center center; /* You might want to adjust this to 'center top' or 'center X% Y%' if the faces are not centered */
             background-repeat: no-repeat;
         }
-
-        /* Overlay for Hero Section - For better text readability */
+        
+        /* Overlay for Hero Section - UPDATED for a "happier" color */
         .hero::before {
             content: '';
             position: absolute;
@@ -202,38 +205,56 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity (0.0 to 1.0) as needed */
-            z-index: 1; /* Below hero-content */
+            /* UPDATED: Light gold semi-transparent overlay. 
+               Uses your --light-gold (#f1eac4 which is rgb(241, 234, 196)).
+               Adjust the alpha (0.25) for more/less transparency. */
+            background-color: rgba(241, 234, 196, 0.25); 
+            /* Alternative "happier" overlays:
+               Softer gold: background-color: rgba(212, 175, 55, 0.2); (using your --gold)
+               Very light/almost no overlay: background-color: rgba(255, 255, 255, 0.15); 
+               Slightly less dark: background-color: rgba(0, 0, 0, 0.2);
+            */
+            z-index: 1; 
         }
-        
+                
         .hero-content {
-            margin-bottom: 2rem;
-            position: relative; /* To sit on top of the overlay */
-            z-index: 2; /* Above overlay */
-            color: var(--white); /* Default text color for hero content */
+            /* UPDATED: Remove or reduce margin-bottom as justify-content handles top alignment now.
+               You can add a small margin if you want space below the "Thank you" message. */
+            margin-bottom: 1rem; /* Or 0, or adjust as needed */
+            position: relative; 
+            z-index: 2; 
+            color: var(--white); 
+            /* If the new overlay is very light, you might need to change text color to dark:
+               color: var(--dark-gray); 
+            */
         }
         
+        /* Optional: If text becomes hard to read with the new overlay, ensure specific text elements have good contrast */
         .hero h1 {
-            font-size: 4rem;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--white); /* Ensure h1 is white */
-        }
-
-        .hero h1 .ampersand { /* Ensure ampersand also gets light color if needed, or specific gold */
-             color: var(--gold); /* Or var(--white) if you prefer */
+            font-size: 4rem; /* Existing */
+            line-height: 1.2; /* Existing */
+            margin-bottom: 1rem; /* Existing */
+            color: var(--white); /* Ensure h1 is white, or var(--dark-gray) if overlay is very light */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional: Adds subtle shadow for readability */
         }
         
-        .hero .date { 
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            color: var(--light-gold); /* Light gold for date, or var(--white) */
-            margin-bottom: 2rem;
+        .hero h1 .ampersand {
+             color: var(--gold); /* Or var(--white) / var(--dark-gray) depending on contrast */
+             text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Optional */
         }
-
+                
+        .hero .date { 
+            font-family: var(--font-serif); /* Existing */
+            font-size: 1.5rem; /* Existing */
+            color: var(--light-gold); /* Or var(--white) / var(--dark-gray) */
+            margin-bottom: 2rem; /* Existing */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional */
+        }
+        
         .hero .hero-content > div { /* For the "Thank you" message */
-            color: var(--off-white); /* Off-white for the message */
-            font-size: 1.1rem;
+            color: var(--off-white); /* Or var(--dark-gray) */
+            font-size: 1.1rem; /* Existing */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional */
         }
 
         /* REMOVED: Styles for .single-hero-image-container */
