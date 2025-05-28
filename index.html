@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Bryan & Donna | Wedding </title>
     <style>
-        /* Global Styles */
         :root {
             --gold: #d4af37;
             --light-gold: #f1eac4;
@@ -14,82 +13,35 @@
             --off-white: #f8f8f8;
             --light-gray: #f0f0f0;
             --dark-gray: #333333;
-            --font-serif: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Montserrat', Arial, sans-serif;
+            --font-serif: 'Bodoni MT', 'Bodoni 72', Didot, 'Hoefler Text', Garamond, 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
-        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        
         body {
             font-family: var(--font-sans);
             color: var(--dark-gray);
             background-color: var(--white);
             line-height: 1.6;
         }
-        
         h1, h2, h3, h4 {
             font-family: var(--font-serif);
             font-weight: 400;
-            color: var(--dark-gray); /* Default color, will be overridden in hero */
+            color: var(--dark-gray); 
         }
-        
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-gold);
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-        }
-        
-        a {
-            color: var(--dark-gold);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        a:hover {
-            color: var(--gold);
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        .gold-text {
-            color: var(--gold);
-        }
-
-        .date { /* Default date style, will be overridden in hero */
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            color: var(--gold);
-            margin: 1rem 0;
-        }
-        
-        /* Header Styles */
+        h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--dark-gold); }
+        h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        p { margin-bottom: 1.5rem; }
+        a { color: var(--dark-gold); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--gold); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .text-center { text-align: center; }
+        .gold-text { color: var(--gold); }
+        .date { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold); margin: 1rem 0; }
         header {
             background-color: var(--white);
             border-bottom: 1px solid var(--light-gold);
@@ -99,47 +51,13 @@
             padding: 15px 0; 
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            text-decoration: none;
-            display: inline-block; 
-            line-height: 1; 
-        }
-        
-        .wedding-logo {
-            height: 40px; 
-            width: auto; 
-            display: block; 
-            transition: all 0.3s ease;
-        }
-        
-        .wedding-logo:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-        
-        .ampersand {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-size: 2.2rem; 
-            vertical-align: middle;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav li {
-            margin-left: 2rem;
-        }
-        
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { text-decoration: none; display: inline-block; line-height: 1; }
+        .wedding-logo { height: 40px; width: auto; display: block; transition: all 0.3s ease; }
+        .wedding-logo:hover { opacity: 0.9; transform: scale(1.02); }
+        .ampersand { font-family: var(--font-serif); font-style: italic; font-size: 2.2rem; vertical-align: middle; }
+        nav ul { display: flex; list-style: none; }
+        nav li { margin-left: 2rem; }
         nav a {
             color: var(--dark-gray);
             font-size: 0.9rem;
@@ -148,11 +66,7 @@
             transition: color 0.3s;
             position: relative;
         }
-        
-        nav a:hover {
-            color: var(--gold);
-        }
-        
+        nav a:hover { color: var(--gold); }
         nav a::after {
             content: '';
             position: absolute;
@@ -163,41 +77,22 @@
             background-color: var(--gold);
             transition: width 0.3s;
         }
-        
-        nav a:hover::after {
-            width: 100%;
-        }
-        
-        .menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark-gray);
-            cursor: pointer;
-        }
-
-        /* Hero Section - for background image */
+        nav a:hover::after { width: 100%; }
+        .menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--dark-gray); cursor: pointer; }
         .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
-            /* UPDATED: Align content block to the top part of the hero section */
             justify-content: flex-start; 
             align-items: center;
             text-align: center;
-            /* UPDATED: Adjust padding-top to position content below header and give some space. 
-               80px for the header, plus some viewport height (e.g., 8vh) for spacing.
-               Adjust '8vh' as needed to position the text perfectly. */
             padding-top: calc(80px + 8vh); 
             position: relative; 
             background-image: url('https://github.com/donnnachiu/bryandonnawedding/raw/7fdcb03d27fccf71926204308d328a80e88e01b5/WhatsApp%20Image%202025-05-27%20at%2000.48.15.jpeg');
             background-size: cover;
-            background-position: center center; /* You might want to adjust this to 'center top' or 'center X% Y%' if the faces are not centered */
+            background-position: center center; 
             background-repeat: no-repeat;
         }
-        
-        /* Overlay for Hero Section - UPDATED for a "happier" color */
         .hero::before {
             content: '';
             position: absolute;
@@ -205,79 +100,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* UPDATED: Light gold semi-transparent overlay. 
-               Uses your --light-gold (#f1eac4 which is rgb(241, 234, 196)).
-               Adjust the alpha (0.25) for more/less transparency. */
             background-color: rgba(241, 234, 196, 0.25); 
-            /* Alternative "happier" overlays:
-               Softer gold: background-color: rgba(212, 175, 55, 0.2); (using your --gold)
-               Very light/almost no overlay: background-color: rgba(255, 255, 255, 0.15); 
-               Slightly less dark: background-color: rgba(0, 0, 0, 0.2);
-            */
             z-index: 1; 
         }
-                
-        .hero-content {
-            /* UPDATED: Remove or reduce margin-bottom as justify-content handles top alignment now.
-               You can add a small margin if you want space below the "Thank you" message. */
-            margin-bottom: 1rem; /* Or 0, or adjust as needed */
-            position: relative; 
-            z-index: 2; 
-            color: var(--white); 
-            /* If the new overlay is very light, you might need to change text color to dark:
-               color: var(--dark-gray); 
-            */
-        }
-        
-        /* Optional: If text becomes hard to read with the new overlay, ensure specific text elements have good contrast */
+        .hero-content { margin-bottom: 1rem; position: relative; z-index: 2; }
         .hero h1 {
-            font-size: 4rem; /* Existing */
-            line-height: 1.2; /* Existing */
-            margin-bottom: 1rem; /* Existing */
-            color: var(--white); /* Ensure h1 is white, or var(--dark-gray) if overlay is very light */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional: Adds subtle shadow for readability */
+            font-size: 4rem; 
+            line-height: 1.2; 
+            margin-bottom: 1rem; 
+            color: var(--dark-gray);
+            text-shadow: 1px 1px 2px var(--white);
         }
-        
-        .hero h1 .ampersand {
-             color: var(--gold); /* Or var(--white) / var(--dark-gray) depending on contrast */
-             text-shadow: 1px 1px 3px rgba(0,0,0,0.2); /* Optional */
-        }
-                
         .hero .date { 
-            font-family: var(--font-serif); /* Existing */
-            font-size: 1.5rem; /* Existing */
-            color: var(--light-gold); /* Or var(--white) / var(--dark-gray) */
-            margin-bottom: 2rem; /* Existing */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional */
+            font-family: var(--font-serif);
+            font-size: 1.5rem; 
+            color: var(--light-gold);
+            margin-bottom: 2rem; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
         }
-        
-        .hero .hero-content > div { /* For the "Thank you" message */
-            color: var(--off-white); /* Or var(--dark-gray) */
-            font-size: 1.1rem; /* Existing */
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Optional */
-        }
-
-        /* REMOVED: Styles for .single-hero-image-container */
-        
-        /* Section Styles */
-        section {
-            padding: 100px 0;
-        }
-        
-        section:nth-child(even) {
-            background-color: var(--off-white);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-header h2 {
-            display: inline-block;
-            position: relative;
-        }
-        
+        section { padding: 100px 0; }
+        section:nth-child(even) { background-color: var(--off-white); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { display: inline-block; position: relative; }
         .section-header h2::after {
             content: '';
             position: absolute;
@@ -288,8 +132,6 @@
             height: 2px;
             background-color: var(--gold);
         }
-        
-        /* Event Details Styles */
         .event {
             background-color: var(--white);
             border: 1px solid var(--light-gold);
@@ -299,66 +141,17 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
-        
-        .event:hover {
-            transform: translateY(-5px);
-        }
-        
-        .event h3 {
-            color: var(--dark-gold);
-            border-bottom: 1px solid var(--light-gold);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .event-details {
-            margin-bottom: 20px;
-        }
-        
-        .event-detail {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-        
-        .event-icon {
-            color: var(--gold);
-            margin-right: 15px;
-            font-size: 1.2rem;
-            min-width: 20px;
-        }
-        
-        .event-schedule {
-            margin-top: 30px;
-        }
-        
-        .schedule-item {
-            display: flex;
-            margin-bottom: 15px;
-        }
-        
-        .schedule-time {
-            width: 100px;
-            color: var(--gold);
-            font-weight: bold;
-        }
-        
-        /* Team Styles */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        
-        .team-member {
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-10px);
-        }
-        
+        .event:hover { transform: translateY(-5px); }
+        .event h3 { color: var(--dark-gold); border-bottom: 1px solid var(--light-gold); padding-bottom: 10px; margin-bottom: 20px; }
+        .event-details { margin-bottom: 20px; }
+        .event-detail { display: flex; align-items: flex-start; margin-bottom: 15px; }
+        .event-icon { color: var(--gold); margin-right: 15px; font-size: 1.2rem; min-width: 20px; }
+        .event-schedule { margin-top: 30px; }
+        .schedule-item { display: flex; margin-bottom: 15px; }
+        .schedule-time { width: 100px; color: var(--gold); font-weight: bold; }
+        .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .team-member { text-align: center; transition: transform 0.3s; }
+        .team-member:hover { transform: translateY(-10px); }
         .team-photo {
             width: 200px;
             height: 200px;
@@ -368,32 +161,10 @@
             border: 5px solid var(--white);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
-        .team-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .team-name {
-            font-size: 1.2rem;
-            color: var(--dark-gold);
-            margin-bottom: 5px;
-        }
-        
-        .team-role {
-            color: var(--gold);
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        /* Accommodation Styles */
-        .accommodation-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
+        .team-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .team-name { font-size: 1.2rem; color: var(--dark-gold); margin-bottom: 5px; }
+        .team-role { color: var(--gold); font-style: italic; margin-bottom: 10px; }
+        .accommodation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .accommodation {
             background-color: var(--white);
             border-radius: 5px;
@@ -401,44 +172,13 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
-        
-        .accommodation:hover {
-            transform: translateY(-10px);
-        }
-        
-        .accommodation-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .accommodation-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .accommodation:hover .accommodation-img img {
-            transform: scale(1.1);
-        }
-        
-        .accommodation-info {
-            padding: 20px;
-        }
-        
-        .accommodation-name {
-            font-size: 1.2rem;
-            color: var(--dark-gold);
-            margin-bottom: 10px;
-        }
-        
-        /* Travel & Food Styles */
-        .travel-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-        
+        .accommodation:hover { transform: translateY(-10px); }
+        .accommodation-img { height: 200px; overflow: hidden; }
+        .accommodation-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .accommodation:hover .accommodation-img img { transform: scale(1.1); }
+        .accommodation-info { padding: 20px; }
+        .accommodation-name { font-size: 1.2rem; color: var(--dark-gold); margin-bottom: 10px; }
+        .travel-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
         .travel-item {
             display: flex;
             background-color: var(--white);
@@ -447,218 +187,76 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s;
         }
-        
-        .travel-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .travel-img {
-            width: 40%;
-            overflow: hidden;
-        }
-        
-        .travel-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .travel-item:hover .travel-img img {
-            transform: scale(1.1);
-        }
-        
-        .travel-info {
-            width: 60%;
-            padding: 20px;
-        }
-        
-        .travel-name {
-            font-size: 1.2rem;
-            color: var(--dark-gold);
-            margin-bottom: 10px;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: var(--dark-gray);
-            color: var(--white);
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-family: var(--font-serif);
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        .footer-text {
-            margin-bottom: 30px;
-        }
-        
-        .footer-links a {
-            color: var(--gold);
-            margin: 0 15px;
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: var(--light-gray);
-        }
-        
-        /* Responsive Styles */
+        .travel-item:hover { transform: translateY(-10px); }
+        .travel-img { width: 40%; overflow: hidden; }
+        .travel-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .travel-item:hover .travel-img img { transform: scale(1.1); }
+        .travel-info { width: 60%; padding: 20px; }
+        .travel-name { font-size: 1.2rem; color: var(--dark-gold); margin-bottom: 10px; }
+        footer { background-color: var(--dark-gray); color: var(--white); padding: 50px 0; text-align: center; }
+        .footer-logo { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
+        .footer-text { margin-bottom: 30px; }
+        .footer-links a { color: var(--gold); margin: 0 15px; }
+        .copyright { margin-top: 30px; font-size: 0.8rem; color: var(--light-gray); }
         @media (max-width: 1024px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .accommodation-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .accommodation-grid { grid-template-columns: repeat(2, 1fr); }
         }
-        
         @media (max-width: 768px) {
-            h1 { /* General h1, hero h1 will override */
-                font-size: 2.5rem; 
-            }
-            
-            .hero h1 { /* Specific to hero for responsiveness */
-                font-size: 3rem; /* Adjust if needed for smaller screens */
-            }
-
-            h2 {
-                font-size: 2rem; 
-            }
-            
-            .nav-container {
-                flex-direction: column;
-                align-items: center; 
-            }
-            
-            .menu-btn {
-                display: block;
-                position: absolute; 
-                right: 20px;
-                top: 50%; 
-                transform: translateY(-50%);
-            }
-            
-            nav ul {
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                display: none; 
-                margin-top: 10px; 
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            nav li {
-                margin: 10px 0;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr; 
-                gap: 30px; 
-            }
-            
-            .accommodation-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .travel-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .travel-item {
-                flex-direction: column;
-            }
-            
-            .travel-img, .travel-info {
-                width: 100%;
-            }
-            
-            .travel-img {
-                height: 200px;
-            }
-
-            .wedding-logo {
-                height: 35px; 
-            }
-            
-            header {
-                padding: 10px 0; 
-            }
+            h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .nav-container { flex-direction: column; align-items: center; }
+            .menu-btn { display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
+            nav ul { flex-direction: column; width: 100%; text-align: center; display: none; margin-top: 10px; }
+            nav ul.show { display: flex; }
+            nav li { margin: 10px 0; }
+            .team-grid { grid-template-columns: 1fr; gap: 30px; }
+            .accommodation-grid { grid-template-columns: 1fr; }
+            .travel-grid { grid-template-columns: 1fr; }
+            .travel-item { flex-direction: column; }
+            .travel-img, .travel-info { width: 100%; }
+            .travel-img { height: 200px; }
+            .wedding-logo { height: 35px; }
+            header { padding: 10px 0; }
         }
-        
         @media (max-width: 480px) {
-            .container {
-                width: 95%;
-                padding: 0 10px;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-            
-            .hero h1 { /* Specific to hero for responsiveness */
-                font-size: 2.2rem; /* Further adjust for very small screens */
-                line-height: 1.3;
-            }
-
-            .hero .date {
-                font-size: 1.2rem;
-            }
-
-            .hero .hero-content > div {
-                font-size: 1rem;
-            }
-            
-            .wedding-logo {
-                height: 30px; 
-            }
+            .container { width: 95%; padding: 0 10px; }
+            section { padding: 60px 0; }
+            .hero h1 { font-size: 2.2rem; line-height: 1.3; }
+            .hero .date { font-size: 1.2rem; }
+            .wedding-logo { height: 30px; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-    <div class="container nav-container">
-        <a href="#home" class="logo">
-            <img src="https://github.com/donnnachiu/bryandonnawedding/blob/b21ad3c54cbdc96d2fd381ff5dd6664a700cfacb/Donna%20%26%20Bryan%20-%20Logo.png?raw=true" 
-                 alt="Bryan & Donna Wedding Logo"
-                 class="wedding-logo">
-        </a>
-        <button class="menu-btn">≡</button>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#accommodation">Accommodation</a></li>
-                <li><a href="#travel">Food & Travel</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="https://github.com/donnnachiu/bryandonnawedding/blob/b21ad3c54cbdc96d2fd381ff5dd6664a700cfacb/Donna%20%26%20Bryan%20-%20Logo.png?raw=true" alt="Bryan & Donna Wedding Logo" class="wedding-logo">
+            </a>
+            <button class="menu-btn">≡</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#accommodation">Accommodation</a></li>
+                    <li><a href="#travel">Food & Travel</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Home Section - HTML structure for content remains, image is now CSS background -->
     <section id="home" class="hero">
-        <div class="container"> <!-- Container might still be useful for centering content -->
+        <div class="container"> 
             <div class="hero-content">
                 <h1>Bryan <span class="ampersand">&</span> Donna</h1>
                 <div class="date"> January 2nd, 2026 (Friday) | Hong Kong</div>
             </div>
-            <!-- Image div is removed from here -->
         </div>
     </section>
 
-    <!-- Details Section -->
     <section id="details">
         <div class="container">
             <div class="section-header">
@@ -669,21 +267,15 @@
                 <div class="event-details">
                     <div class="event-detail">
                         <div class="event-icon">📍</div>
-                        <div>
-                            <p><strong>Distance:</strong>4-5km morning run along the harbourfront</p>
-                        </div>
+                        <div><p><strong>Distance:</strong>4-5km morning run along the harbourfront</p></div>
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">🕒</div>
-                        <div>
-                            <p><strong>Time:</strong> 8:00am - 10:00AM</p>
-                        </div>
+                        <div><p><strong>Time:</strong> 8:00am - 10:00AM</p></div>
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">👗</div>
-                        <div>
-                            <p><strong>Dress Code:</strong> Running attire, comfortable shoes</p>
-                        </div>
+                        <div><p><strong>Dress Code:</strong> Running attire, comfortable shoes</p></div>
                     </div>
                 </div>
                 <div class="event-schedule">
@@ -705,15 +297,11 @@
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">🕒</div>
-                        <div>
-                            <p><strong>Time:</strong> 3:00PM - 5:00PM</p>
-                        </div>
+                        <div><p><strong>Time:</strong> 3:00PM - 5:00PM</p></div>
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">👗</div>
-                        <div>
-                            <p><strong>Dress Code:</strong> Floral tropical dress and attire</p>
-                        </div>
+                        <div><p><strong>Dress Code:</strong> Floral tropical dress and attire</p></div>
                     </div>
                 </div>
                 <div class="event-schedule">
@@ -735,117 +323,85 @@
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">🕒</div>
-                        <div>
-                            <p><strong>Time:</strong> 7:00 PM - 1:00 AM</p>
-                        </div>
+                        <div><p><strong>Time:</strong> 7:00 PM - 1:00 AM</p></div>
                     </div>
                     <div class="event-detail">
                         <div class="event-icon">👗</div>
-                        <div>
-                            <p><strong>Dress Code:</strong> Formal Attire </p>
-                        </div>
+                        <div><p><strong>Dress Code:</strong> Formal Attire </p></div>
                     </div>
                 </div>
                 <div class="event-schedule">
                     <h4>Schedule</h4>
-                    <div class="schedule-item">
-                        <div class="schedule-time">7:00 PM</div>
-                        <div>Guest Arrival</div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">7:30 PM</div>
-                        <div>Ceremony Begins</div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">8:00 PM</div>
-                        <div>Chinese Dinner Banquet Begins</div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">8:00 PM-11:00 PM </div>
-                        <div>Dinner & Celebrations</div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">11:00 PM-1:00 AM</div>
-                        <div>After-party (with soft music)</div>
-                    </div>
+                    <div class="schedule-item"><div class="schedule-time">7:00 PM</div><div>Guest Arrival</div></div>
+                    <div class="schedule-item"><div class="schedule-time">7:30 PM</div><div>Ceremony Begins</div></div>
+                    <div class="schedule-item"><div class="schedule-time">8:00 PM</div><div>Chinese Dinner Banquet Begins</div></div>
+                    <div class="schedule-item"><div class="schedule-time">8:00 PM-11:00 PM </div><div>Dinner & Celebrations</div></div>
+                    <div class="schedule-item"><div class="schedule-time">11:00 PM-1:00 AM</div><div>After-party (with soft music)</div></div>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+              <h3>Our Wedding Invitation</h3>
+              <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
+               <img src="https://github.com/donnnachiu/bryandonnawedding/blob/dbd5661ae52f9b7d2b3912ed0c96d3aa63a31e6c/%E5%8D%93%E5%A4%A9%E8%88%AA%26%E8%B6%99%E6%A8%82%E6%AC%A3%E8%AF%B7%E5%B8%96%E5%96%9C%E5%B8%96%E8%BD%AC%E6%9B%B2.jpg1.jpg?raw=true" alt="Wedding Invitation (Chinese)" style="max-width: 300px; width: 100%; height: auto; border: 1px solid var(--light-gold); box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+               <img src="https://github.com/donnnachiu/bryandonnawedding/blob/dbd5661ae52f9b7d2b3912ed0c96d3aa63a31e6c/%E5%8D%93%E5%A4%A9%E8%88%AA%26%E8%B6%99%E6%A8%82%E6%AC%A3%E8%AF%B7%E5%B8%96%E5%96%9C%E5%B8%96%E8%BD%AC%E6%9B%B2.jpg2.jpg?raw=true" alt="Wedding Invitation (English)" style="max-width: 300px; width: 100%; height: auto; border: 1px solid var(--light-gold); box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+              </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
     <section id="team">
         <div class="container">
-            <div class="section-header">
-                <h2>Team</h2>
-            </div>
-            
+            <div class="section-header"><h2>Team</h2></div>
             <h3 class="text-center">Bridesmaids</h3>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="bridesmaid1.jpg" alt="Bridesmaid 1">
-                    </div>
+                    <div class="team-photo"><img src="bridesmaid1.jpg" alt="Bridesmaid 1"></div>
                     <h4 class="team-name">[Bridesmaid Name]</h4>
                     <p class="team-role">Maid of Honor</p>
                     <p>Short description about this person and their relationship to the bride.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="bridesmaid2.jpg" alt="Bridesmaid 2">
-                    </div>
+                    <div class="team-photo"><img src="bridesmaid2.jpg" alt="Bridesmaid 2"></div>
                     <h4 class="team-name">[Bridesmaid Name]</h4>
                     <p class="team-role">Bridesmaid</p>
                     <p>Short description about this person and their relationship to the bride.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="bridesmaid3.jpg" alt="Bridesmaid 3">
-                    </div>
+                    <div class="team-photo"><img src="bridesmaid3.jpg" alt="Bridesmaid 3"></div>
                     <h4 class="team-name">[Bridesmaid Name]</h4>
                     <p class="team-role">Bridesmaid</p>
                     <p>Short description about this person and their relationship to the bride.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="bridesmaid4.jpg" alt="Bridesmaid 4">
-                    </div>
+                    <div class="team-photo"><img src="bridesmaid4.jpg" alt="Bridesmaid 4"></div>
                     <h4 class="team-name">[Bridesmaid Name]</h4>
                     <p class="team-role">Bridesmaid</p>
                     <p>Short description about this person and their relationship to the bride.</p>
                 </div>
             </div>
-            
             <h3 class="text-center" style="margin-top: 50px;">Groomsmen</h3>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="groomsman1.jpg" alt="Groomsman 1">
-                    </div>
+                    <div class="team-photo"><img src="groomsman1.jpg" alt="Groomsman 1"></div>
                     <h4 class="team-name">[Groomsman Name]</h4>
                     <p class="team-role">Best Man</p>
                     <p>Short description about this person and their relationship to the groom.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="groomsman2.jpg" alt="Groomsman 2">
-                    </div>
+                    <div class="team-photo"><img src="groomsman2.jpg" alt="Groomsman 2"></div>
                     <h4 class="team-name">[Groomsman Name]</h4>
                     <p class="team-role">Groomsman</p>
                     <p>Short description about this person and their relationship to the groom.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="groomsman3.jpg" alt="Groomsman 3">
-                    </div>
+                    <div class="team-photo"><img src="groomsman3.jpg" alt="Groomsman 3"></div>
                     <h4 class="team-name">[Groomsman Name]</h4>
                     <p class="team-role">Groomsman</p>
                     <p>Short description about this person and their relationship to the groom.</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-photo">
-                        <img src="groomsman4.jpg" alt="Groomsman 4">
-                    </div>
+                    <div class="team-photo"><img src="groomsman4.jpg" alt="Groomsman 4"></div>
                     <h4 class="team-name">[Groomsman Name]</h4>
                     <p class="team-role">Groomsman</p>
                     <p>Short description about this person and their relationship to the groom.</p>
@@ -854,18 +410,12 @@
         </div>
     </section>
 
-    <!-- Accommodation Section -->
     <section id="accommodation">
         <div class="container">
-            <div class="section-header">
-                <h2>Accommodation</h2>
-            </div>
-            
+            <div class="section-header"><h2>Accommodation</h2></div>
             <div class="accommodation-grid">
                 <div class="accommodation">
-                    <div class="accommodation-img">
-                        <img src="hotel1.jpg" alt="Hotel 1">
-                    </div>
+                    <div class="accommodation-img"><img src="hotel1.jpg" alt="Hotel 1"></div>
                     <div class="accommodation-info">
                         <h4 class="accommodation-name">[Hotel Name]</h4>
                         <p><strong>Distance to Venue:</strong> X km</p>
@@ -875,9 +425,7 @@
                     </div>
                 </div>
                 <div class="accommodation">
-                    <div class="accommodation-img">
-                        <img src="hotel2.jpg" alt="Hotel 2">
-                    </div>
+                    <div class="accommodation-img"><img src="hotel2.jpg" alt="Hotel 2"></div>
                     <div class="accommodation-info">
                         <h4 class="accommodation-name">[Hotel Name]</h4>
                         <p><strong>Distance to Venue:</strong> X km</p>
@@ -887,9 +435,7 @@
                     </div>
                 </div>
                 <div class="accommodation">
-                    <div class="accommodation-img">
-                        <img src="hotel3.jpg" alt="Hotel 3">
-                    </div>
+                    <div class="accommodation-img"><img src="hotel3.jpg" alt="Hotel 3"></div>
                     <div class="accommodation-info">
                         <h4 class="accommodation-name">[Hotel Name]</h4>
                         <p><strong>Distance to Venue:</strong> X km</p>
@@ -902,19 +448,13 @@
         </div>
     </section>
 
-    <!-- Travel & Food Section -->
     <section id="travel">
         <div class="container">
-            <div class="section-header">
-                <h2>Food & Travel in Hong Kong</h2>
-            </div>
-            
+            <div class="section-header"><h2>Food & Travel in Hong Kong</h2></div>
             <h3>Restaurants</h3>
             <div class="travel-grid">
                 <div class="travel-item">
-                    <div class="travel-img">
-                        <img src="restaurant1.jpg" alt="Restaurant 1">
-                    </div>
+                    <div class="travel-img"><img src="restaurant1.jpg" alt="Restaurant 1"></div>
                     <div class="travel-info">
                         <h4 class="travel-name">[Restaurant Name]</h4>
                         <p><strong>Cuisine:</strong> [Type of Cuisine]</p>
@@ -924,9 +464,7 @@
                     </div>
                 </div>
                 <div class="travel-item">
-                    <div class="travel-img">
-                        <img src="restaurant2.jpg" alt="Restaurant 2">
-                    </div>
+                    <div class="travel-img"><img src="restaurant2.jpg" alt="Restaurant 2"></div>
                     <div class="travel-info">
                         <h4 class="travel-name">[Restaurant Name]</h4>
                         <p><strong>Cuisine:</strong> [Type of Cuisine]</p>
@@ -936,13 +474,10 @@
                     </div>
                 </div>
             </div>
-            
             <h3 style="margin-top: 50px;">Things to Do</h3>
             <div class="travel-grid">
                 <div class="travel-item">
-                    <div class="travel-img">
-                        <img src="activity1.jpg" alt="Activity 1">
-                    </div>
+                    <div class="travel-img"><img src="activity1.jpg" alt="Activity 1"></div>
                     <div class="travel-info">
                         <h4 class="travel-name">[Activity Name]</h4>
                         <p><strong>Category:</strong> [Type of Activity]</p>
@@ -952,9 +487,7 @@
                     </div>
                 </div>
                 <div class="travel-item">
-                    <div class="travel-img">
-                        <img src="activity2.jpg" alt="Activity 2">
-                    </div>
+                    <div class="travel-img"><img src="activity2.jpg" alt="Activity 2"></div>
                     <div class="travel-info">
                         <h4 class="travel-name">[Activity Name]</h4>
                         <p><strong>Category:</strong> [Type of Activity]</p>
@@ -967,13 +500,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-logo">Bryan & Donna</div>
-            <div class="footer-text">
-                <p>We can't wait to celebrate with you!</p>
-            </div>
+            <div class="footer-text"><p>We can't wait to celebrate with you!</p></div>
             <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#details">Details</a>
@@ -981,28 +511,21 @@
                 <a href="#accommodation">Accommodation</a>
                 <a href="#travel">Food & Travel</a>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 Bryan & Donna Wedding. All Rights Reserved.</p>
-            </div>
+            <div class="copyright"><p>&copy; 2026 Bryan & Donna Wedding. All Rights Reserved.</p></div>
         </div>
     </footer>
 
     <script>
-        // Mobile Navigation Toggle
         document.querySelector('.menu-btn').addEventListener('click', function() {
             document.querySelector('nav ul').classList.toggle('show');
         });
-        
-        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 var navUl = document.querySelector('nav ul');
                 if (navUl.classList.contains('show')) {
                     navUl.classList.remove('show');
                 }
-                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
